@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+    {% include 'header.tmpl' %}
+        <div class="center">
+            <h1>Страница картинок</h1>
+        </div>
+        <div class="product__box center">
+            {% for image in images %}
+                <div class="product">
+                    <a href="/?p=imagepage&id_images={{image.id_images}}">
+                        <img style="width: {{image.image_size}}px" class="product__img" src="/img/{{image.image_name}}.jpeg" alt="photo">
+                    </a>
+                    <div class="product__content">
+                        <a href="/?p=imagepage&id_images={{image.id_images}}" class="product__name">{{image.image_name}}</a>
+                        <p class="product__price">$52.00</p>
+                    </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% include 'footer.tmpl' %}
+    </body>
+
+</html>

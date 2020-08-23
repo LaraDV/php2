@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+    {% include 'header.tmpl' %}
+            <p>
+                <a href="?p=images" class="product__name">перейти на страницу картинок</a>
+            </p>
+            <img class="product__img" src="/img/{{image.image_name}}.jpeg" alt="photo">
+    {% include 'footer.tmpl' %}
+    </body>
+</html>
