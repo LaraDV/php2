@@ -51,18 +51,21 @@ class FrontController
 
 		//HomeController
 		$class = '\\application\\controller\\' . ucfirst($controller) . "Controller";//ucfirst — Преобразует первый символ строки в верхний регистр .../BasketController
-
+		print_r($class);
 		if (!class_exists($class)) {
+			print_r('1');
 			return $this->view->render("error500");
 		}
 
 		$controller = new $class;//
 
 		if (!method_exists($controller, "action_" . $action)) {
+			print_r('2');
 			return $this->view->render("error500");//404
 		}
 
 		if (!$controller->before()) {//before() здесь вызовет метод класса BaseController или другого класса наследника если будет переопределен//устанавливает this.title из конфига и this.user из сессии
+			print_r('3');
 			return $this->view->render("error500");
 		}
 
