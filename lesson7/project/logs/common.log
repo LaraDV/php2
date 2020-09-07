@@ -1,0 +1,13 @@
+[2020-08-29 09:43:47] common.ERROR: Wrong URL format. [] []
+[2020-08-29 09:43:49] common.ERROR: Wrong URL format. [] []
+[2020-08-29 09:44:41] common.ERROR: Wrong URL format. [] []
+[2020-08-29 09:44:42] common.ERROR: Wrong URL format. [] []
+[2020-08-29 09:45:00] common.ERROR: Wrong URL format. [] []
+[2020-08-29 09:45:39] common.ERROR: Wrong URL format / [] []
+[2020-08-29 09:45:39] common.ERROR: Wrong URL format / [] []
+[2020-08-29 09:51:40] common.ERROR: Unable to find template "index.tmpl" (looked into: /Users/alekseiborisov/Work/geekbrains/PHP. Level2/newVersion//application/view). [] []
+[2020-08-29 09:52:30] common.ERROR: Wrong URL format /feedback/ [] []
+[2020-08-29 09:52:37] common.ERROR: Class \application\controller\ProductController doesn't exist [] []
+[2020-08-29 09:52:47] common.ERROR: Unable to find template "contact.tmpl" (looked into: /Users/alekseiborisov/Work/geekbrains/PHP. Level2/newVersion//application/view). [] []
+[2020-09-07 11:59:03] common.ERROR: Class \application\controller\ProductsController doesn't exist [] []
+

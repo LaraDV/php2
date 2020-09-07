@@ -1,0 +1,18 @@
+        {% include 'templates/header.tmpl' %}
+        <h1 style="margin-bottom: 90px; margin-left: 30%;">Каталог товаров</h1>
+        <div class="product__box center">
+            {% for item in products %}
+                <div class="product">
+                    <a href="/?path=products/productPage&id={{item.id}}">
+                        <img style="width: 120px" class="product__img" src="/img/{{item.name}}.jpeg" alt="photo">
+                    </a>
+                    <div class="product__content">
+                        <a href="/productpage/?id={{ID}}" class="product__name">{{item.name}}</a>
+                        <p class="product__price">${{item.price}}</p>
+                    </div>
+                    <a href="#">Add to Cart</a>
+                </div>
+            {% endfor %}
+        </div>
+
+        {% include 'templates/footer.tmpl' %}

@@ -1,0 +1,18 @@
+
+    <body>
+        {% include 'templates/header.tmpl' %}
+        <h1 style="margin-bottom: 90px; margin-left: 30%;">Страница товара</h1>
+        <div class="product__box center">
+                <div class="product">
+                    <a href="/productpage/?id={{product.id}}">
+                        <img style="width: 120px" class="product__img" src="/img/{{product.name}}.jpeg" alt="photo">
+                    </a>
+                    <div class="product__content">
+                        <a href="/productpage/?id={{ID}}" class="product__name">{{product.name}}</a>
+                        <p class="product__price">${{product.price}}</p>
+                    </div>
+                    <a href="#">Add to Cart</a>
+                </div>
+        </div>
+
+        {% include 'templates/footer.tmpl' %}
