@@ -14,7 +14,7 @@ class ProductsController extends Controller
      * 2) App::dispatch -> controller = HomeController, action = action_index
      */
     public function action_index()
-    {
+    {   App::logger()->debug("I am on products page");
         $productsModel = new ProductsModel;
         $products = $productsModel->getProducts();
 

@@ -25,8 +25,19 @@ class Application
 		$this->config = new Config();
 		$this->request = new Request();
 
+		// $this->logger = new Logger('common');
+		// $this->logger->pushHandler(new StreamHandler(BASE_PATH . '/logs/common.log', Logger::WARNING));
+
+		$level = logger::DEBUG;
+		if ($this->config->get("env") == "production") {
+			$level = Logger::INFO;
+		}
+
 		$this->logger = new Logger('common');
-		$this->logger->pushHandler(new StreamHandler(BASE_PATH . '/logs/common.log', Logger::WARNING));
+		$this->logger->pushHandler(
+			new StreamHandler(BASE_PATH . '/logs/common.log',
+			$level
+		));
 	}
 
 	private function __clone()
